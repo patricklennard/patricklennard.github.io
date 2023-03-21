@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: patricklennard.github.io
+Token: ab2cbacc9dfbc8c08ee683a97d5c9b01f78d090f546850532445ed4aa9ddf080

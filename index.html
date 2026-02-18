@@ -6,6 +6,48 @@
 -->
 <html>
 	<head>
+		<style>
+		/* Container for the timeline */
+		ul.timeline {
+		    list-style-type: none; /* Removes default browser bullets */
+		    border-left: 2px solid #c0c0c0; /* The connecting vertical line */
+		    padding-left: 30px; /* Space between the line and the text */
+		    margin-left: 15px; 
+		}
+
+		/* Individual qualification blocks */
+		ul.timeline li {
+		    position: relative;
+		    margin-bottom: 2.5em; /* Space between each qualification */
+		}
+
+		/* The connecting dots */
+		ul.timeline li::before {
+		    content: '';
+		    position: absolute;
+		    left: -39px; /* Pulls the dot to sit perfectly over the vertical line */
+		    top: 0.25em; /* Aligns the dot vertically with your heading */
+		    width: 16px;
+		    height: 16px;
+		    border-radius: 50%;
+		    background-color: #ffffff; /* Fills the center of the dot (usually matches background) */
+		    border: 2px solid #c0c0c0; /* The colored ring of the dot */
+		}
+
+		/* Optional text styling for neatness */
+		ul.timeline h3 { 
+		    margin: 0 0 0.2em 0; 
+		}
+		ul.timeline .date { 
+		    display: block; 
+		    font-size: 0.9em; 
+		    color: #888888; 
+		    margin-bottom: 0.8em; 
+		}
+		ul.timeline p { 
+		    margin: 0; 
+		}
+		</style>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FLX6H75PE"></script>
 		<script>
@@ -25,6 +67,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 	</head>
 	<body class="is-preload">
@@ -74,6 +117,28 @@
 							<p>
 							Hey, I'm Pat, a biotechnologist from Tasmania who is passionate about One Health, comparative immunology, and antimicrobial resistance. Lover of early morning runs, DIY science, anything fermented, and travel whenever I get the chance.
 							</p>
+
+
+							<ul class="timeline">
+							    <li>
+							        <h3>Ph.D. in Devilish Science</h3>
+							        <span class="date">2020 - 2024 | University Name</span>
+							        <p>Your details about research, thesis title, and major achievements go here. This text block will sit neatly next to the timeline.</p>
+							    </li>
+    
+							    <li>
+							        <h3>Master of Science</h3>
+							        <span class="date">2018 - 2020 | University Name</span>
+							        <p>Details about your coursework, master's thesis, and specializations go here.</p>
+							    </li>
+    
+							    <li>
+							        <h3>Bachelor of Science</h3>
+							        <span class="date">2014 - 2018 | University Name</span>
+							        <p>Details about your undergraduate degree and major projects.</p>
+							    </li>
+							</ul>
+
 							<h4 id="about"><b>BBiotechMedRes (Hons)</b></h4>
 								<p>I studied my Bachelor of Biotechnology and Medical Research at my home-state University of Tasmania from 2013 to 2016, graduating with a major in Neurobiology. Over the course of this degree I was lucky to work in neuroscience, 
 								stem cell and cancer-centric research groups, the latter of which I would continue with. Inspired by my time volunteering for the <a href="https://www.menzies.utas.edu.au/research/diseases-and-health-issues/research-groups/devil-facial-tumour-disease-woods-group">Tasmanian Devil Facial Tumour Disease research group</a>, I pursued my Honours study under the supervision

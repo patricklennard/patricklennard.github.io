@@ -64,7 +64,49 @@
 		  height: 100%;
 		}
 
+		.carousel-container {
+		    position: relative;
+		    max-width: 1000px;
+		    margin: 2rem auto;
+		    overflow: hidden;
+		    border-radius: 8px;
+		}
+		
+		.carousel-wrapper {
+		    display: flex;
+		    transition: transform 0.5s ease-in-out;
+		}
+		
+		.carousel-slide {
+		    min-width: 100%;
+		}
+
+		.carousel-slide img {
+		    width: 100%;
+		    display: block;
+		    height: auto;
+		}
+
+		/* Navigation Buttons */
+		.prev, .next {
+		    position: absolute;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    background-color: rgba(0,0,0,0.5);
+		    color: white;
+		    border: none;
+		    padding: 16px;
+		    cursor: pointer;
+		    border-radius: 3px;
+		}
+		
+		.next { right: 0; }
+		.prev { left: 0; }
+
+		.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
 		</style>
+
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FLX6H75PE"></script>
 		<script>
@@ -306,6 +348,10 @@
 							  <iframe src="https://www.youtube.com/embed/Ji7OBH3aHKY?si=kW-MjX5xf2nCTHaU" title="3rd IDOH Day, 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 							</p>
+
+							<h3>Photography</h3>
+							You can see some of my snaps from my travels on the carousel below.
+
 							<ul class="actions small">
 								<li><a href="#main" class="button small wide smooth-scroll-middle">Back to top</a></li>
 							</ul>
@@ -370,6 +416,18 @@
 			<script src="assets/js/main.js"></script>
 
                         <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-
+                        <script>
+                        let currentIndex = 0;
+                        
+                        function moveSlide(direction) {
+                            const slides = document.querySelectorAll('.carousel-slide');
+                            const totalSlides = slides.length;
+                            
+                            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                            const offset = -currentIndex * 100;
+                            
+                            document.querySelector('.carousel-wrapper').style.transform = `translateX(${offset}%)`;
+                        }
+                        </script>
 	</body>
 </html>
